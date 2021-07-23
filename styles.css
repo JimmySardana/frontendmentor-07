@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-image: url(./images/bg-mobile.svg), linear-gradient(hsl(257, 40%, 49%),hsl(257, 40%, 49%));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: Poppins;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+header {
+    display: flex;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+header img {
+    width: 50%;
+    max-width: 220px;
+}
+
+.pic img {
+    width: 100%;
+}
+
+.grid-container {
+    max-width: 340px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3.5rem;
+    flex-grow: 1;
+}
+
+.description {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+
+.description h1 {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.description p {
+    color: rgba(255, 255, 255, 0.808);
+    font-size: .94em;
+    margin-bottom: 1.5rem;
+}
+
+.description button {
+    box-shadow: 5px 5px 11px -3px #262626;
+    background-color: rgba(255, 255, 255, 0.911);
+    font-size: .82em;
+    font-family: Open Sans;
+    color: hsl(257, 40%, 49%);
+    padding: .8rem;
+    width: 220px;
+    border-radius: 2rem;
+    border: none;
+}
+
+.description button:hover {
+    cursor: pointer;
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+}
+
+.socials {
+    display: flex;
+    color: white;
+    justify-self: center;
+}
+
+.socials div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    margin: 0 .5rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+}
+
+.socials div:hover {
+    cursor: pointer;
+    color: hsl(300, 69%, 71%);
+    border: 1px solid hsl(300, 69%, 71%);
+}
+
+.fa-twitter {
+    transform: translate(1px, 1px);
+}
+
+@media screen and (min-width: 800px) {
+
+    body {
+        background-image: url(./images/bg-desktop.svg), linear-gradient(hsl(257, 40%, 49%),hsl(257, 40%, 49%));
+        background-size: cover;
+    }
+
+    .grid-container {
+        max-width: 90%;
+        grid-template-columns: 1.2fr 1fr;
+        column-gap: 3rem;
+    }
+
+    .socials {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .container {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .description {
+        text-align: left;
+    }
+
+    .description button {
+        max-width: 150px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .description {
+        font-size: 20px;
+    }
+
+    .description button {
+        font-size: .7em;
+    }
+}
